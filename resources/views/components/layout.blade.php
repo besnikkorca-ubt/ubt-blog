@@ -1,6 +1,6 @@
 @props([
     'category' => null,
-    'categories'
+    'categories' => null
 ])
 
 <!doctype html>
