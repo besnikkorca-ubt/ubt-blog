@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Post;
 
 class PostController extends Controller
@@ -11,7 +12,7 @@ class PostController extends Controller
     {
         $posts = Post::latest()->filter(request(['search']))->get();
         $categories = Category::all();
-        return view('posts', [
+        return view('posts.index', [
             'posts' => $posts,
             'categories' => $categories
         ]);
@@ -19,7 +20,7 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        return view('post', [
+        return view('posts.show', [
             'post' => $post
         ]);
     }

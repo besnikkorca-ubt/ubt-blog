@@ -7,6 +7,7 @@
         </form>
     </div>
 
+    @if($categories)
     <div class="category-picker">
         <x-dropdown>
             <x-slot name="trigger">
@@ -23,4 +24,5 @@
 
         </x-dropdown>
     </div>
+    @endif
 </div>
