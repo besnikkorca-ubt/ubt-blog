@@ -1,6 +1,7 @@
 <x-layout :categories="$categories">
     <div id="page" class="site-page">
         <div id="content" class="site-content">
+            <p>test 123</p>
             @foreach($posts as $post)
                 <x-post-layout :post="$post" />
             @endforeach
