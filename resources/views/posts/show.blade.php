@@ -12,6 +12,11 @@
         </div>
     </article>
 
+    @include('posts._comment-form')
+    @foreach($post->comments as $comment)
+        <x-post-comment :comment="$comment" />
+    @endforeach
+
     <a href="/">Go back</a>
 </x-layout>
 
